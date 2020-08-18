@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 21, 2020 at 05:11 PM
+-- Generation Time: Aug 18, 2020 at 11:52 PM
 -- Server version: 10.5.3-MariaDB
 -- PHP Version: 7.4.6
 
@@ -44,7 +44,7 @@ CREATE TABLE `ab_admins` (
 --
 
 INSERT INTO `ab_admins` (`id`, `role_id`, `username`, `name_first`, `name_last`, `hashed_password`, `email`, `status`, `date_created`) VALUES
-(1, 1, 'Demo', 'DemoFirst', 'DemoLast', '$2y$10$y5ZmRexAq3nhxGVzaFN.XOTlgoOPAQ3GAJg8Jkv649OAqCEafopLO', 'demo@fake.email', 1, '2020-07-01 19:40:57');
+(1, 1, 'Demo', 'Demo', 'User', '$2y$10$x340rsYpLz3uWyNdytqK1OtInLT.lFML.k.beWUy132dbawe2JpQa', 'demo@address.book', 1, '2020-07-01 19:40:57');
 
 -- --------------------------------------------------------
 
@@ -73,7 +73,12 @@ CREATE TABLE `ab_contacts` (
 --
 
 INSERT INTO `ab_contacts` (`id`, `name_first`, `name_last`, `email`, `address`, `address2`, `city`, `state`, `zip`, `phone_home`, `phone_mobile`, `date_of_birth`, `date_created`) VALUES
-(78, 'Alex', 'Keaton', 'a.keaton@tv.star', '1234 Main St', '', 'Columbus', 'OH', '43016', '614-222-2222', '614-333-3333', '1961-06-09', '2020-07-21 16:30:13');
+(78, 'Alex P.', 'Keaton', 'a.keaton@tv.starr', '1234 Main St', 'Unit 7', 'Columbus', 'OH', '43016', '614-222-2222', '614-333-3333', '1961-06-09', '2020-07-21 16:30:13'),
+(97, 'Mallory', 'Keaton', 'justinebateman@tvstarr.info', '1234 Main St', '', 'Columbus', 'OH', '43016', '614-222-2222', '614-333-3333', '1966-02-19', '2020-08-18 22:22:45'),
+(98, 'Elyse', 'Keaton', 'meredithbaxter@tvstarr.info', '1234 Main St', '', 'Columbus', 'OH', '43016', '614-222-2222', '614-333-3333', '1947-06-21', '2020-08-18 22:24:58'),
+(99, 'Jennifer', 'Keaton', 'tinayothers@tvstarr.info', '1234 Main St', '', 'Columbus', 'OH', '43016', '614-222-2222', '614-333-3333', '1973-05-05', '2020-08-18 22:26:20'),
+(100, 'Steven', 'Keaton', 'michaelgross@tvstarr.info', '1234 Main St', '', 'Columbus', 'OH', '43016', '614-222-2222', '614-333-3333', '1947-06-21', '2020-08-18 22:27:29'),
+(101, 'Andy', 'Keaton', 'brianbonsall@tvstarr.info', '1234 Main St', '', 'Columbus', 'OH', '43016', '614-222-2221', '614-333-3333', '1981-12-03', '2020-08-18 22:28:46');
 
 -- --------------------------------------------------------
 
@@ -91,7 +96,14 @@ CREATE TABLE `ab_images` (
 --
 
 INSERT INTO `ab_images` (`id`, `filename`) VALUES
-(108, 'alex.keaton_MA8w96.png');
+(121, 'alex.keaton_ehaEOw.png'),
+(179, 'john.usb_x0Da8C.jpg'),
+(184, 'mallory.keaton_YtdKIQ.png'),
+(185, 'elyse.keaton_uD28sK.png'),
+(186, 'jennifer.keaton_bn1Yex.png'),
+(187, 'steven.keaton_pQQxH_.png'),
+(188, 'andy.keaton_AUMRht.png'),
+(194, 'profile-3_wW5OIi.png');
 
 -- --------------------------------------------------------
 
@@ -109,7 +121,12 @@ CREATE TABLE `ab_image_xref` (
 --
 
 INSERT INTO `ab_image_xref` (`contact_id`, `image_id`) VALUES
-(78, 108);
+(78, 121),
+(97, 184),
+(98, 185),
+(99, 186),
+(100, 187),
+(101, 188);
 
 -- --------------------------------------------------------
 
@@ -210,6 +227,14 @@ CREATE TABLE `ab_user_image_xref` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Address Book User Images Cross Reference Table';
 
 --
+-- Dumping data for table `ab_user_image_xref`
+--
+
+INSERT INTO `ab_user_image_xref` (`user_id`, `image_id`) VALUES
+(1, 194),
+(10, 179);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -265,7 +290,8 @@ ALTER TABLE `ab_roles_permissions`
 -- Indexes for table `ab_user_image_xref`
 --
 ALTER TABLE `ab_user_image_xref`
-  ADD PRIMARY KEY (`user_id`,`image_id`);
+  ADD PRIMARY KEY (`user_id`,`image_id`),
+  ADD KEY `image_id` (`image_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -275,19 +301,19 @@ ALTER TABLE `ab_user_image_xref`
 -- AUTO_INCREMENT for table `ab_admins`
 --
 ALTER TABLE `ab_admins`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Administrator ID', AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Administrator ID', AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `ab_contacts`
 --
 ALTER TABLE `ab_contacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Contact ID', AUTO_INCREMENT=79;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Contact ID', AUTO_INCREMENT=103;
 
 --
 -- AUTO_INCREMENT for table `ab_images`
 --
 ALTER TABLE `ab_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Image ID', AUTO_INCREMENT=109;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Image ID', AUTO_INCREMENT=195;
 
 --
 -- AUTO_INCREMENT for table `ab_roles`
