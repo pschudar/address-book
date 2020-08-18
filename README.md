@@ -1,5 +1,5 @@
 # address-book
-A full featured but simple address book written in PHP
+An elegantly simple but powerful address book application written in PHP7, HTML5, CSS3, JavaScript and utilizing W3.CSS framework. I am an avid fan of Bootstrap, however, it's quite heavy. For a demo script like this, I felt it was entirely too much.
 
 # Installation
 Open adddress_book.sql in your favorite text editor. Copy the contents of the file and run through PHPMyAdmin.
