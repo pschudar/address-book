@@ -1,3 +1,5 @@
+![Image of Project](address_book.gif)
+
 # address-book
 An elegantly simple but powerful address book application written in PHP7, HTML5, CSS3, JavaScript and utilizing W3.CSS framework. I am an avid fan of Bootstrap, however, it's quite heavy. For a demo script like this, I felt it was entirely too much.
 
