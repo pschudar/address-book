@@ -44,7 +44,7 @@ CREATE TABLE `ab_admins` (
 --
 
 INSERT INTO `ab_admins` (`id`, `role_id`, `username`, `name_first`, `name_last`, `hashed_password`, `email`, `status`, `date_created`) VALUES
-(1, 1, 'Demo', 'Demo', 'User', '$2y$10$x340rsYpLz3uWyNdytqK1OtInLT.lFML.k.beWUy132dbawe2JpQa', 'demo@address.book', 1, '2020-07-01 19:40:57');
+(1, 1, 'Demo', 'Demo', 'User', '$2y$10$x340rsYpLz3uWyNdytqK1OtInLT.lFML.k.beWUy132dbawe2JpQa', 'demo@address.book', 1, '2020-08-01 19:40:57');
 
 -- --------------------------------------------------------
 
@@ -97,7 +97,6 @@ CREATE TABLE `ab_images` (
 
 INSERT INTO `ab_images` (`id`, `filename`) VALUES
 (121, 'alex.keaton_ehaEOw.png'),
-(179, 'john.usb_x0Da8C.jpg'),
 (184, 'mallory.keaton_YtdKIQ.png'),
 (185, 'elyse.keaton_uD28sK.png'),
 (186, 'jennifer.keaton_bn1Yex.png'),
@@ -231,8 +230,7 @@ CREATE TABLE `ab_user_image_xref` (
 --
 
 INSERT INTO `ab_user_image_xref` (`user_id`, `image_id`) VALUES
-(1, 194),
-(10, 179);
+(1, 194);
 
 --
 -- Indexes for dumped tables
