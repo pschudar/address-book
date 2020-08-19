@@ -1,7 +1,7 @@
 ![Image of Project](address_book.gif)
 
 # address-book
-An elegantly simple but powerful address book application written in PHP7, HTML5, CSS3, JavaScript and utilizing W3.CSS framework and 1 MySQL or MariaDB database. I am an avid fan of Bootstrap, however, it's quite heavy. For a demo script like this, I felt it was entirely too much.
+An elegantly simple but powerful address book application written in PHP7, HTML5, CSS3, JavaScript and utilizing W3.CSS framework as well as 1 MySQL or MariaDB database. I am an avid fan of Bootstrap, however, it's quite heavy. For a demo script like this, I felt it was entirely too much. W3.CSS provided an assortment of themes straight out of the box, is light-weight and fairly well documented. While I disagree with the author's usage of inline JavaScript, I am quite pleased with its performance and lack of jQuery.
 
 # Installation
 1. On your server, create a new database: 'address_book'
