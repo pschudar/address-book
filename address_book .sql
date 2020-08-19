@@ -103,7 +103,7 @@ INSERT INTO `ab_images` (`id`, `filename`) VALUES
 (186, 'jennifer.keaton_bn1Yex.png'),
 (187, 'steven.keaton_pQQxH_.png'),
 (188, 'andy.keaton_AUMRht.png'),
-(194, 'profile-3_wW5OIi.png');
+(194, 'profile-3.png');
 
 -- --------------------------------------------------------
 
